@@ -1,14 +1,14 @@
 ﻿namespace Core
 {
-    public delegate TResult Func<in T, out TResult>(T arg);
+    public delegate TResult TranslationCondition<in T, out TResult>(T arg);
 
     public class Translation
     {
         #region construction
-        private readonly Func<int, bool> isTriggeredBy;
-        public Translation(Func<int, bool> translationTriggeredWhen, string output)
+        private readonly TranslationCondition<int, bool> isTriggeredBy;
+        public Translation(TranslationCondition<int, bool> condition, string output)
         {
-            this.isTriggeredBy = translationTriggeredWhen;
+            this.isTriggeredBy = condition;
             Output = output;
         }
         #endregion
