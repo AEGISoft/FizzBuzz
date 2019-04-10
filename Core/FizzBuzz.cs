@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 
-namespace FizzBuzz
+namespace Core
 {
     public static class FizzBuzz
     {
         #region default translations
-        internal static List<Translation> DefaultTranslations
+        public static List<Translation> DefaultTranslations
         { get
             {
                 return new List<Translation>()
@@ -17,26 +17,26 @@ namespace FizzBuzz
             }
         }
 
-        internal static Translation DivisableByThreeTranslation
+        public static Translation DivisableByThreeTranslation
         { get { return new Translation((x) => x % 3 == 0, "Fizz"); } }
 
-        internal static Translation DivisableByFiveTranslation
+        public static Translation DivisableByFiveTranslation
         { get { return new Translation((x) => x % 5 == 0, "Buzz"); } }
 
-        internal static Translation DivisableByThreeAndFiveTranslation
+        public static Translation DivisableByThreeAndFiveTranslation
         { get { return new Translation((x) =>(x % 3 == 0) && (x % 5 == 0), "FizzBuzz"); } }
         #endregion
 
-        internal static string Print(int input, List<Translation> translations) { return Print(input, translations.ToArray()); }
-        internal static string Print(int input, params Translation[] translations)
+        public static string Print(int input, List<Translation> translations) { return Print(input, translations.ToArray()); }
+        public static string Print(int input, params Translation[] translations)
         {
             foreach (var translation in translations) { if (translation.IsTriggeredBy(input)) return translation.Output; }
             
             return input.ToString();
         }
 
-        internal static string Print(int from, int untilAndIncluding, List<Translation> translations) { return Print(from, untilAndIncluding, translations.ToArray()); }
-        internal static string Print(int from, int untilAndIncluding, params Translation[] translations)
+        public static string Print(int from, int untilAndIncluding, List<Translation> translations) { return Print(from, untilAndIncluding, translations.ToArray()); }
+        public static string Print(int from, int untilAndIncluding, params Translation[] translations)
         {
             var result = string.Empty;
 

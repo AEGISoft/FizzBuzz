@@ -1,0 +1,7 @@
+﻿/.vs/FizzBuzz/v15
+/Core/bin/Debug/netcoreapp2.1
+/Core/obj
+/FizzBuzz/bin/Debug/netcoreapp2.1
+/FizzBuzz/obj
+/Tests/bin/Debug/netcoreapp2.1
+/Tests/obj

@@ -1,4 +1,4 @@
-﻿namespace FizzBuzz
+﻿namespace Core
 {
     public delegate TResult Func<in T, out TResult>(T arg);
 

@@ -1,6 +1,7 @@
 using Xunit;
+using Core;
 
-namespace FizzBuzz
+namespace Tests
 {
     public class FizzBuzzBehavior
     {
